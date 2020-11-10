@@ -4,25 +4,62 @@ layout: base
 
 {% include header.html type="page" %}
 
+
+
 <div class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}" role="main">
   <div class="row">
     <div class="{% if page.full-width %} col {% else %} col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}">
       {% if page.before-content %}
-        <div class="before-content">
-          {% for file in page.before-content %}
-            {% include {{ file }} %}
-          {% endfor %}
-        </div>
+      <div class="before-content">
+        {% for file in page.before-content %}
+        {% include {{ file }} %}
+        {% endfor %}
+      </div>
       {% endif %}
 
-      {{ content }}
+
+
+
+
+      <div class=" container-md " role="main">
+        <div class="row mt-5">
+          <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 mt-5">
+            <div class="main-explain-area jumbotron text-center pt-2">
+              <p>This website is powered by GitHub Pages/Jekyll and can be built for free in <strong><strong>under 5
+                    minutes</strong></strong></p>
+              <div class="text-center">
+                <a class="btn btn-success btn-lg get-started-btn"
+                  href="https://github.com/daattali/beautiful-jekyll#readme">MP4 format</a>
+                <a class="btn btn-primary btn-lg get-started-btn" href="/plans">PDF format</a>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+
 
       {% if page.after-content %}
-        <div class="after-content">
-          {% for file in page.after-content %}
-            {% include {{ file }} %}
-          {% endfor %}
-        </div>
+      <div class="after-content">
+        {% for file in page.after-content %}
+        {% include {{ file }} %}
+        {% endfor %}
+      </div>
       {% endif %}
 
       {% include comments.html %}
